@@ -14,45 +14,57 @@ Este projeto realiza a automação de testes de uma aplicação Web, cobrindo o 
     
  - A conta standard_user entrou, inclusive nos testes do Cypress, porem, no Cypress tem um bug de confirmação de autorização.
 
+#
+
 <div align="center">
     <img src="Sprints.bugs/Screenshot 2024-11-26 042227.png" style="max-width: 100%;">
 </div>
 <div align="center">
-    <img width="560" src="Sprints.bugs/image.png">
+    <img width="1920" src="Sprints.bugs/image.png"">
  </div>
 
+ #
+
  - A conta locked_out_user esta bloqueada, inclusive nos testes do Cypress.
+#
 
 <div align="center">
-    <img src="Sprints.bugs/Screenshot 2024-11-26 042826.png" style="max-width: 100%;">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 042826.png">
 </div>
+
+#
 
  - A conta problem_user entrou porem as imagens e preços estão errados, inclusive nos testes do Cypress, mas, no Cypress tem um bug de confirmação de autorização.
-
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 021614.png">
+    <img width="1950" src="Sprints.bugs/Screenshot 2024-11-26 021614.png">
 </div>
 
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-25 180412.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-25 180412.png">
 </div>
 
+#
  - A conta performance_out_user entrou sem problemas, mas esta com problemas de performance, demora de 3 a 7 segundos para abrir, inclusive nos testes do Cypress,  mas, no Cypress tem um bug de confirmação de autorização.
-
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 043628.png">
+    <img src="Sprints.bugs/Screenshot 2024-11-26 043628.png" style="max-width: 100%;">
 </div>
+
+#
 
  - A conta error_user entrou sem problemas, inclusive nos testes do Cypress, mas, no Cypress tem um bug de confirmação de autorização.
-
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 043944.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 043944.png">
 </div>
 
- - A conta visual_user entrou, mas tem uma imagem bugada em um produto, inclusive nos testes do Cypress, mas no Cypress tem um bug de confirmação de autorização.
+#
 
+ - A conta visual_user entrou, mas tem uma imagem bugada em um produto, inclusive nos testes do Cypress, mas no Cypress tem um bug de confirmação de autorização.
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 005247.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 005247.png">
 </div>
   
 #
@@ -65,38 +77,48 @@ Este projeto realiza a automação de testes de uma aplicação Web, cobrindo o 
 
  - A conta standard_user saiu corretamente, inclusive nos testes do Cypress.
 
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 044602.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 044602.png">
 </div>
-    
+#
+
  - A conta locked_out_user esta bloqueada, inclusive nos testes do Cypress.
 
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 042826.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 042826.png">
 </div>
+
+#
 
  - A conta problem_user saiu corretamente, porem as imagens e preços estão errados, inclusive nos testes do Cypress.
-
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 045229.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 045229.png">
 </div>
+
+#
 
  - A conta performance_out_user saiu sem problemas, mas esta com problemas de performance, demora de 3 a 7 segundos para abrir, inclusive nos testes do Cypress.
-
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 045513.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 045513.png">
 </div>
+#
 
  - A conta error_user saiu corretamente, inclusive nos testes do Cypress.
-
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 043944.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 043944.png">
 </div>
 
- - A conta visual_error saiu de forma correta, inclusive nos testes do Cypress.
+#
 
+ - A conta visual_error saiu de forma correta, inclusive nos testes do Cypress.
+#
 <div align="center">
-     <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 050126.png">
+     <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 050126.png">
 </div>
 
 #
@@ -105,50 +127,61 @@ Este projeto realiza a automação de testes de uma aplicação Web, cobrindo o 
  - Adicionar os produtos no carrinho e validar o resultado.
  - Remover item do carrinho e validar o resultado.
  - Remover todos os itens do carrinho de uma vez e validar o resultado.
-
+#
 **Resultado:** 
  - A maioria das contas passaram pelos testes sem problemas.
 
  - A conta standard_user adicionou e removel todos os produtos de forma rapida e sem erros, inclusive nos testes do Cypress.
-
+#
  <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 050622.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 050622.png">
  </div>
 
+#
 
  - A conta locked_out_user esta bloqueada, inclusive nos testes do Cypress.
-
+#
  <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 042826.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 042826.png">
  </div>
 
- - A conta problem_user adicionou e removel todos os produtos de forma rapida e sem erros, inclusive nos testesd do Cypress.
+#
 
+ - A conta problem_user adicionou e removel todos os produtos de forma rapida e sem erros, inclusive nos testesd do Cypress.
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 050911.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 050911.png">
 </div>
+
+#
 
  - A conta performance_out_user adicionou e removel todos os produtos mas a performance esta ruim, chega demora 5 segundos para excluir um produto. 
-
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 051251.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 051251.png">
 </div>
+
+#
 
  - A conta error_user teve problemas para adicionar e remover varios produtos, inclusive nos testes do Cypress.
-
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 051423.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 051423.png">
 </div>
 
- - A conta visual_error adicionou e removel os produtos corretamente, mas os produtos estão com fotos, preços e descrições errados.
+#
 
+ - A conta visual_error adicionou e removel os produtos corretamente, mas os produtos estão com fotos, preços e descrições errados.
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 051536.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 051536.png">
 </div>
 
 #
 
 4.**Navegação da Pagina**
+
+#
  - Realizar navegação entre paginas usando a função Name (Z to A) da pagina e validar o resultado.
 
  - Realizar navegação entre paginas usando a função Name (A to Z) da pagina e validar o resultado.
@@ -182,91 +215,103 @@ Este projeto realiza a automação de testes de uma aplicação Web, cobrindo o 
 
  - Realizar navegação entre paginas entrando na função **Finalizar compra** e validando o resultado.
 
+#
+
  **Resultado:**
  - A maioria das contas tiveram problemas.
 
 - A conta standard_user navegou sem nenhum problema, apenas um bug de autorização de carregamento no Cypress, mas resolvido, todas as paginas abriram , no navegador sem nenhum problema.
-
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 051938.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 051938.png">
 </div>
 
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 052018.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 052018.png">
 </div>
 
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 052121.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 052121.png">
 </div>
 
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 052217.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 052217.png">
 </div>
 
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 052250.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 052250.png">
 </div>
 
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 052458.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 052458.png">
 </div>
+
+#
 
 - A conta locked_out_user esta bloqueada, inclusive nos testes do Cypress.
-
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 042826.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 042826.png">
 </div>
+
+#
 
  - A conta problem_user esta com problemas para abrir outras paginas, adicionar produtos no carrinho, buscar produtos pelo id, produtos com imagens e descrições erradas.
-
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 053549.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 053549.png">
 </div>
 
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 053409.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 053409.png">
 </div>
 
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 053457.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 053457.png">
 </div>
+
+#
 
 - A conta performance_glich_user navegou de forma muito demorada chegando a passar de 2 minutos no Cypress.
-
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 053138.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 053138.png">
 </div>
+
+#
 
 - A conta error_user esta com problemas para adicionar produtos no carrinho, funções de busca por Nome e preço não  estão funcionando, preços mudados, funções mudando de lugar, inclusive nos testes do Cypress, mas tem outros bugs no Cypress como paginas não abrirem ou abrirem bugadas e erro de autorização.
-
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 054530.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 054530.png">
 </div>
 
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 054938.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 054938.png">
 </div>
 
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 054744.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 054744.png">
 </div>
 
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 054831.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 054831.png">
 </div>
+
+#
 
  - A conta visual_user teve uma boa navegação mas algumas as imagens estão bugadas, produtos com nomes, preços e descrições erradas, inclusive nos testes do Cypress.
-
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 055459.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 055459.png">
 </div>
 
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 055608.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 055608.png">
 </div>
 
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 055649.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 055649.png">
 </div>
 
 #
@@ -282,67 +327,82 @@ Este projeto realiza a automação de testes de uma aplicação Web, cobrindo o 
 
  - Pesquisar produtos usando a posição com o comando Cypress *eq*.
 
-**Resultado:**
+#
+
+## **Resultado:**
  - A maioria das contas foram bem.
 
  - A conta standard_user pesquisou todos os produtos de forma completa, mostrando o produto, sua descrição e preço correto, inclusive no Cypress.
 
+#
+
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 060451.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 060451.png">
 </div>
 
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 060415.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 060415.png">
 </div>
 
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 060252.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 060252.png">
 </div>
 
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 060153.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 060153.png">
 </div>
+
+#
 
 - A conta locked_out_user esta bloqueada, inclusive nos testes do Cypress.
-
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 042826.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 042826.png">
 </div>
+
+#
 
 - A conta problem_user esta com problema para buscar os produtos id, pois ao abrir certos produtos são diferentes dos que estavam em outras contas, inclusive nos testes do Cypress.
-
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 061143.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 061143.png">
 </div>
 
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 061108.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 061108.png">
 </div>
 
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 061343.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 061343.png">
 </div>
+
+#
 
  - A conta performance_glich_user buscou todos os produtos mas esta com problemas de performance, chegando a demorar mais de 1 minuto, tanto no navegador quanto no Cypress.
-
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 061924.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 061924.png">
 </div>
+
+#
 
 - A conta error_user não teve problemas em pesquisar os produtos, pelo id, por click e nem os testes no Cypress usando comandos customizados de busca pelo nome, id, fixture, posição(eq).
-
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 062151.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 062151.png">
 </div>
+
+#
 
 - A conta visual_user não teve problemas em buscar os protudos, nem abri-los usando id, nome, preço e seleção dos produtos, o problema são as imagens e preços dos produtos trocados, inclusive do Cypress.
+#
 
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 062417.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 062417.png">
 </div>
 
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 062438.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 062438.png">
 </div>
 
 #
@@ -350,63 +410,75 @@ Este projeto realiza a automação de testes de uma aplicação Web, cobrindo o 
 5.**Floxo de compra da Pagina**
  - Realizar um fluxo de compra de ponta a ponta.
 
-**Resultado:**
+#
+
+## **Resultado:**
  - A maioria das contas realizaram o teset completo.
 
  - A conta standard_user buscou os produtos, adicionou, realisou o checkout e concluiu a compra sem nenhum problem, de forma dinamica, rapida e completa, inclusive nos testes do Cypress.
-
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 062800.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 062800.png">
 </div>
 
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 062737.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 062737.png">
 </div>
+
+#
 
 - A conta locked_out_user esta bloqueada, inclusive nos testes do Cypress.
-
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 042826.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 042826.png">
 </div>
+
+#
 
 - A conta problem_user falhou no teste devido a não ser possivel colocar os dados do checkout devido a um bug que impede de adicionar informação, inpedindo o pedido, inclusive nos testes do cypress.
-
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 063122.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 063122.png">
 </div>
 
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 063003.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 063003.png">
 </div>
 
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 063054.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 063054.png">
 </div>
+
+#
 
  - A conta performance_glich_user realisou todos os testes, desde as escolhas dos produtas ao finalização da compra, o problema é sua performance que demorou de 07 a 12 segundos para concluir o teste, inclusive nos testes do Cypress.
-
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 063707.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 063707.png">
 </div>
 
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 063627.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 063627.png">
 </div>
+
+#
 
  - A conta error_user falhou no teste devido a um bug que impede de ser possivel adicionar alguns produtos no carrinho para fazer o pedido, inpedindo do usuário realizar a compra, inclusive nos testes do Cypress.
-
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 063707.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 063707.png">
 </div>
 
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 063627.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 063627.png">
 </div>
+
+#
 
 - A conta visual_user realisou todos os testes, desde as escolhas dos produtas ao finalização da compra, o problema são os produtos estarem com preços errados e as imagens trocadas, inclusive nos testes do Cypress.
-
+#
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 064309.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 064309.png">
 </div>
 
 #
@@ -426,84 +498,96 @@ Este projeto realiza a automação de testes de uma aplicação Web, cobrindo o 
 
  - Deve demonstrar bug de Request - TOKEN e validar o resultado. **BUG**
 
-**Resultado:**
+#
+
+## **Resultado:**
  - Esta lina de testes foi feita co  o Cypress para validar esses erros pontuais do Cypress.
 
  - O teste de entrar com uma conta não criada de ocorre a mensaguem de conta não existe e abre o bug de autenticação no Cypress.
+#
 
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 065204.png">
-</div>
-
- - O bug de entrar com a conta problem_user varias imagens bugadas, com valores que errados de até $V-1 por tras, em diferentes areas da pagina, e quando clica para comprar a tela fica branca e o site trava, inclusive nos testes do Cypress.
-
-<div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 065241.png">
-</div>
-
-<div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 064947.png">
-</div>
-
-<div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 065027.png">
-</div>
-
- - O bug performance, ao entrar com a conta preformance_glitch_user todos os processos e abrir, adicionar, buscar, abrir outros sites ficam extrememente lentos, inclusive no Cypress.
-
-<div align="center">
-       <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 065131.png">
-</div>
-
- - O bug do carrinho, ao tentar adicionar no usuário problem_user onde alguns produtos no carrinho ou tentar remover ocorre um bug, em que os produtos não são adicionados e no caso da conta problem_user a alguns produtos bugados que travam o site.
-
-<div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 064947.png">
-</div>
-
-<div width="560" align="center">
-    <img src="Sprints.bugs/Screenshot 2024-11-26 065027.png">
-</div>
-
-- O bug do Checkout, ao tentar adicionar as informações para fazer a compra, a área de adicionar o sobrenome buga, mudando o primeiro nome colocado e inpedindo a compra dos produtos.
-
-<div width="560" align="center">
-    <img src="Sprints.bugs/Screenshot 2024-11-26 070728.png">
-</div>
-
-<div width="560" align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 070637.png">
-</div>
-
-<div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 070652.png">
-</div>
-
- - O bug do Request e esclusiva do Cypress pois é um erro de mensagem, ao carregar a pagina no Cypress, não encontra a credencial valida do usuário (TOKEN) deixando uma mensagem infinita de equisiçõ de token, onde enchem o terminal de erros seguidos, plocurando credencial do usuário.
-
-  <div align="center">
-      <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 071104.png">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 065204.png">
 </div>
 
 #
 
+ - O bug de entrar com a conta problem_user varias imagens bugadas, com valores que errados de até $V-1 por tras, em diferentes areas da pagina, e quando clica para comprar a tela fica branca e o site trava, inclusive nos testes do Cypress.
+
+ #
+   
+<div align="center">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 065241.png">
+</div>
+
+<div align="center">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 064947.png">
+</div>
+
+<div align="center">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 065027.png">
+</div>
+
+#
+
+ - O bug performance, ao entrar com a conta preformance_glitch_user todos os processos e abrir, adicionar, buscar, abrir outros sites ficam extrememente lentos, inclusive no Cypress.
+#
+<div align="center">
+       <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 065131.png">
+</div>
+
+#
+
+ - O bug do carrinho, ao tentar adicionar no usuário problem_user onde alguns produtos no carrinho ou tentar remover ocorre um bug, em que os produtos não são adicionados e no caso da conta problem_user a alguns produtos bugados que travam o site.
+#
+<div align="center">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 064947.png">
+</div>
+
+<div width="1920" align="center">
+    <img src="Sprints.bugs/Screenshot 2024-11-26 065027.png">
+</div>
+
+#
+
+- O bug do Checkout, ao tentar adicionar as informações para fazer a compra, a área de adicionar o sobrenome buga, mudando o primeiro nome colocado e inpedindo a compra dos produtos.
+#
+<div width="1920" align="center">
+    <img src="Sprints.bugs/Screenshot 2024-11-26 070728.png">
+</div>
+
+<div width="560" align="center">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 070637.png">
+</div>
+
+<div align="center">
+    <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 070652.png">
+</div>
+
+#
+
+ - O bug do Request e esclusiva do Cypress pois é um erro de mensagem, ao carregar a pagina no Cypress, não encontra a credencial valida do usuário (TOKEN) deixando uma mensagem infinita de equisiçõ de token, onde enchem o terminal de erros seguidos, plocurando credencial do usuário.
+
+#
+  <div align="center">
+      <img width="1920" src="Sprints.bugs/Screenshot 2024-11-26 071104.png">
+</div>
 
 
 # Automação de Testes da Pagina Web de Testes: Saucedemo.com
 
-
+<br>
 
 Este projeto realiza a automação de testes de uma aplicação Web, cobrindo o fluxo completo de login, logout, seleção de produtos, fluxo de compra, navegação, carrinho e descoberta de erros e bugs. O ambiente utiliza Navegador (Chrome), Node.js, Cypress.io, Jenkins, Visual Studios e DevTools.
 
-
-
 ## Pré-requisitos
-
 
 Certifique-se de que você possui as seguintes ferramentas instaladas:
 
  - **Node.js** (versão LTS recomendada)
  - **Visual Studios** (Ultima versão recomendada)
+   
+<br>
 
 ## Instalação
 
@@ -513,33 +597,41 @@ Certifique-se de que você possui as seguintes ferramentas instaladas:
    npm install
    npm install cypress
 ```
+<br>
 
 2. **Execução de testes**
 
 ```bash
    npx cypress open
 ```
+<br>
+
 ## Automação de CI/CD
 
 Realizando a integração do projeto ao GitHub, podemos Automatizar o código a integração Contínua (CI) e a Integração Contínua Deployment (CD), podendo ter melhor controle do versionamento do código.
+
+<br>
 
 ## Pré-requisitos
 
 Certifique-se de que você possui as seguintes ferramentas instaladas:
 
- - **Navegador** (Ultima versão recomendada)
- - **Jenkins** (Ultima versão recomendada)
- - **Node.js** (versão LTS recomendada)
- - **Visual Studios** (Ultima versão recomendada)
+  - **Navegador** (Ultima versão recomendada)
+  - **Jenkins** (Ultima versão recomendada)
+  - **Node.js** (versão LTS recomendada)
+  - **Visual Studios** (Ultima versão recomendada)
 
-1. **Instalação**
+## 1. **Instalação**
 
 - Abrir o visual Studios e digitar no terminal.
 ```bash
    npm install
    npm install cypress
 ```
-2. **Ambiente configurado**
+<br>
+
+## 2. **Ambiente configurado**
+
 
  - Instalar o Jenkins.
 
@@ -558,6 +650,8 @@ Certifique-se de que você possui as seguintes ferramentas instaladas:
  - Clicar em configurar, descer até Pipenile e escolher a opção Pipeline script.
 
  - Digitar no Script:
+
+<br>
 
 ```bash
 pipeline {
@@ -579,19 +673,21 @@ npm run cy:run'''
     }
 }
 ```
- - Ou escolher a opcão Pipeline script from SCM, clicar na opção SCM e colocar Git.
+#
 
- - Copiar o link deste repositório e colar na opção URL que ira aparecer.
+- Ou escolher a opcão Pipeline script from SCM, clicar na opção SCM e colocar Git.
+
+- Copiar o link deste repositório e colar na opção URL que ira aparecer.
     
- - Click em salvar, depois em Construir Agora.
+- Click em salvar, depois em Construir Agora.
 
- - Clicando em Build você acompanha seu teste em execusão.
+- Clicando em Build você acompanha seu teste em execusão.
 
-    
+ <br>
 
-- **Tecnologias Utilizadas**
+## **Tecnologias Utilizadas**
   
-- **Cypress.io:** Framework para automação de testes.
-- **Jenkins:** Ferramenta para automação de código aberto.
-- **GitHub:** Ferramenta de desenvolvimento colaborativo.
-- **Visual Studios** Ferramenta de desenvolvimento de software.
+ - **Cypress.io:** Framework para automação de testes.
+ - **Jenkins:** Ferramenta para automação de código aberto.
+ - **GitHub:** Ferramenta de desenvolvimento colaborativo.
+ - **Visual Studios** Ferramenta de desenvolvimento de software.
