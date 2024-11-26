@@ -12,11 +12,11 @@ Este projeto realiza o teste de uma API de Reservas de Hotel, se trata de uma AP
     - Mensagem: Status code é (200).
 
    <div align="Center">
-     <image rsc="">
+     <img src="Sprints.status/Screenshot 2024-11-26 084541.png">
    </div>
 
    <div align="Center">
-     <image rsc="">
+     <img src="Sprints.status/Screenshot 2024-11-26 084549.png">
    </div>
 
 2.**Criar Reservas no Hotel - POST**
@@ -28,11 +28,11 @@ Este projeto realiza o teste de uma API de Reservas de Hotel, se trata de uma AP
     - Mensagem: Status code é (200).
 
    <div align="Center">
-     <image rsc="">
+     <img src="Sprints.status/Screenshot 2024-11-26 084600.png">
    </div>
 
    <div align="Center">
-     <image rsc="">
+     <img src="Sprints.status/Screenshot 2024-11-26 084608.png">
    </div>
 
 3.**Atualizar Reserva já criada - PUT**
@@ -44,10 +44,10 @@ Este projeto realiza o teste de uma API de Reservas de Hotel, se trata de uma AP
     - Mensagem: Status code é (200).
 
    <div width="560" align="Center">
-     <image rsc="">
+     <img src="Sprints.status/Screenshot 2024-11-26 084734.png">
    </div>
    <div width="560" align="Center">
-     <image rsc="">
+     <img src="Sprints.status/Screenshot 2024-11-26 084747.png">
    </div>
 
 4.**Atualizar um Usuário da Reserva - PATCH**
@@ -59,10 +59,10 @@ Este projeto realiza o teste de uma API de Reservas de Hotel, se trata de uma AP
     - Mensagem: Status code é (200).
 
    <div width="560" align="Center">
-     <image rsc="">
+     <img src="Sprints.status/Screenshot 2024-11-26 084830.png">
    </div>
    <div width="560" align="Center">
-     <image rsc="">
+     <img src="Sprints.status/Screenshot 2024-11-26 084838.png">
    </div>
 
 5.**Deletar uma Reserva do Hotel - DEL**
@@ -73,10 +73,10 @@ Este projeto realiza o teste de uma API de Reservas de Hotel, se trata de uma AP
     - Mensagem: Status code é (201).
 
    <div width="560" align="Center">
-     <image src="">
+     <img src="Sprints.status/Screenshot 2024-11-26 084853.png">
    </div>
    <div width="560" align="Center">
-     <image rsc="">
+     <img src="Sprints.status/Screenshot 2024-11-26 084904.png">
    </div>
 
 ## Cenário nagativos
@@ -89,11 +89,8 @@ Este projeto realiza o teste de uma API de Reservas de Hotel, se trata de uma AP
     - Mensagem: Lista de Reserva do Hotel não encontrada, atravez do "Not Found".
     - Mensagem: Status code é (401).
 
-   <div width="560" align="Center">
-     <image rsc="">
-   </div>
-   <div width="560" align="Center">
-     <image rsc="">
+   <div align="Center">
+     <img src="Sprints.status/Screenshot 2024-11-26 084514.png">
    </div>
 
 2.**Gerar Token Inválido - POST**
@@ -103,11 +100,8 @@ Este projeto realiza o teste de uma API de Reservas de Hotel, se trata de uma AP
     - Mensagem: Credenciais Inválidas, atravez do "reason".
     - Mensagem: Status code é (200).
 
-   <div width="560" align="Center">
-     <image rsc="">
-   </div>
-   <div width="560" align="Center">
-     <image rsc="">
+   <div align="Center">
+     <img src="Sprints.status/Screenshot 2024-11-26 084502.png">
    </div>
 
 3.**Criar Reserva já Existente - POST**
@@ -118,11 +112,8 @@ Este projeto realiza o teste de uma API de Reservas de Hotel, se trata de uma AP
     - Mensagem: Reserva já Criada, atravez do "Internal Server Error".
     - Mensagem: Status code é (500).
 
-   <div width="560" align="Center">
-     <image rsc="">
-   </div>
-   <div width="560" align="Center">
-     <image rsc="">
+   <div align="Center">
+     <img src="Sprints.status/Screenshot 2024-11-26 084452.png">
    </div>
 
 4.**Atualizar Reserva não Criada - PUT**
@@ -132,11 +123,8 @@ Este projeto realiza o teste de uma API de Reservas de Hotel, se trata de uma AP
     - Mensagem: Não é possivel a auteração , atravez do "Method Not Allowed".
     - Mensagem: Status code é (405).
 
-   <div width="560" align="Center">
-     <image rsc="">
-   </div>
-   <div width="560" align="Center">
-     <image rsc="">
+   <div align="Center">
+     <img src="Sprints.status/Screenshot 2024-11-26 084433.png">
    </div>
 
 5.**Atualizar Usuário da Reserva Inexistente - PATCH**
@@ -146,11 +134,12 @@ Este projeto realiza o teste de uma API de Reservas de Hotel, se trata de uma AP
     - Mensagem: Não é possivel alteração, reserva Inexistente , atravez do "Method Not Allowed".
     - Mensagem: Status code é (405).
 
-   <div width="560" align="Center">
-     <image rsc="">
+   <div align="Center">
+     <img src="">
    </div>
-   <div width="560" align="Center">
-     <image rsc="">
+
+   <div align="Center">
+     <img src="Sprints.status/Screenshot 2024-11-26 084411.png">
    </div>
 
 6.**Deleta Reserva Inexistente - DEL**
@@ -160,11 +149,8 @@ Este projeto realiza o teste de uma API de Reservas de Hotel, se trata de uma AP
     - Mensagem: Reserva não pode ser Deletado (Inexistente), atravez do "Method Not Allowed".
     - Mensagem: Status code é (405).
 
-   <div width="560" align="Center">
-     <image rsc="">
-   </div>
-   <div width="560" align="Center">
-     <image rsc="">
+   <div align="Center">
+     <img src="Sprints.status/Screenshot 2024-11-26 084349.png">
    </div>
 
 ## Filtros e Buscas
@@ -177,11 +163,12 @@ Este projeto realiza o teste de uma API de Reservas de Hotel, se trata de uma AP
     - Mensagem: ID de uma reserva especifica que corresponde aos critérios de pesquisa" atarvez do "bookingid".
     - Mensagem: Status code é (200).
 
-   <div width="560" align="Center">
-     <image rsc="">
+   <div align="Center">
+     <img src="Sprints.status/Screenshot 2024-11-26 084312.png">
    </div>
-   <div width="560" align="Center">
-     <image rsc="">
+
+   <div align="Center">
+     <img src="Sprints.status/Screenshot 2024-11-26 084322.png">
    </div>
 
 2.**Buscar Reservas especificas pelo id - GET**
@@ -191,11 +178,12 @@ Este projeto realiza o teste de uma API de Reservas de Hotel, se trata de uma AP
     - Mensagem: Usuário encontrado, atravez do "firstname".
     - Mensagem: Status code é (200).
 
-   <div width="560" align="Center">
-     <image rsc="">
+   <div align="Center">
+     <img src="Sprints.status/Screenshot 2024-11-26 084240.png">
    </div>
-   <div width="560" align="Center">
-     <image rsc="">
+
+   <div align="Center">
+     <img src="Sprints.status/Screenshot 2024-11-26 084249.png">
    </div>
 
 2.**Buscar Reservas pelo Sobrenome - GET**
@@ -205,11 +193,12 @@ Este projeto realiza o teste de uma API de Reservas de Hotel, se trata de uma AP
     - Mensagem: Reserva de Josh, atravez do "bookingid".
     - Mensagem: Status code é (200).
 
-   <div width="560" align="Center">
-     <image rsc="">
+   <div align="Center">
+     <img src="Sprints.status/Screenshot 2024-11-26 084136.png">
    </div>
-   <div width="560" align="Center">
-     <image rsc="">
+
+   <div align="Center">
+     <img src="Sprints.status/Screenshot 2024-11-26 084223.png">
    </div>
 
 3.**Buscar Reservas por check-in - GET**
@@ -219,11 +208,12 @@ Este projeto realiza o teste de uma API de Reservas de Hotel, se trata de uma AP
     - Mensagem: Todas as Reservas de 02/03/2018, atravez do "bookingid".
     - Mensagem: Status code é (200).
 
-   <div width="560" align="Center">
-     <image rsc="">
+   <div align="Center">
+     <img src="Sprints.status//Screenshot 2024-11-26 084037.png>
    </div>
-   <div width="560" align="Center">
-     <image rsc="">
+
+   <div align="Center">
+     <img src="Sprints.status/Screenshot 2024-11-26 084057.png">
    </div>
 
 4.**Buscar Reservas por check-out - GET**
@@ -233,11 +223,12 @@ Este projeto realiza o teste de uma API de Reservas de Hotel, se trata de uma AP
     - Mensagem: Todas as Reservas de 14/06/2001, atravez do "bookingid".
     - Mensagem: Status code é (200).
 
-   <div width="560" align="Center">
-     <image rsc="">
+   <div align="Center">
+     <img src="Sprints.status/Screenshot 2024-11-26 084011.png">
    </div>
-   <div width="560" align="Center">
-     <image rsc="">
+
+   <div align="Center">
+     <img src="Sprints.status/Screenshot 2024-11-26 084001.png">
    </div>
 
 ## Token
@@ -249,9 +240,10 @@ Este projeto realiza o teste de uma API de Reservas de Hotel, se trata de uma AP
     - Mensagem: Token pa usar em solicitações futuras, atravez do "token".
     - Mensagem: Status code é (200).
 
-   <div width="560" align="Center">
-     <image rsc="">
+   <div align="Center">
+     <img src="Sprints.status/Screenshot 2024-11-26 083922.png">
    </div>
-   <div width="560" align="Center">
-     <image rsc="">
+
+   <div align="Center">
+     <img src="Sprints.status/Screenshot 2024-11-26 083935.png">
    </div>
