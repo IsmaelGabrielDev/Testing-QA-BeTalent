@@ -24,7 +24,7 @@ Este projeto realiza a automação de testes de uma aplicação Web, cobrindo o 
  - A conta locked_out_user esta bloqueada, inclusive nos testes do Cypress.
 
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 042826.png">
+    <img src="Sprints.bugs/Screenshot 2024-11-26 042826.png" style="max-width: 100%;">
 </div>
 
  - A conta problem_user entrou porem as imagens e preços estão errados, inclusive nos testes do Cypress, mas, no Cypress tem um bug de confirmação de autorização.
