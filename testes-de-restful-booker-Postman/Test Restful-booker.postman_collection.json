@@ -1,0 +1,917 @@
+{
+	"info": {
+		"_postman_id": "6ccb7f7e-3d7a-4df8-8a45-dc839fe26f75",
+		"name": "Test Restful-booker",
+		"description": "Realizamos Cenários de Testes da API de Reserva de Hotel,\n\ndesde Listar as Reservas, Criar, Editar e Deletar Reservas e Usuários.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38937682"
+	},
+	"item": [
+		{
+			"name": "Cenários negativos",
+			"item": [
+				{
+					"name": "Listar Reservas Hotel Inexistentes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Lista de Reserva do Hotel não encontrada\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Not Found\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code é 404\", function () {\r",
+									"  pm.response.to.have.status(404);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hotel}}/bookingi",
+							"host": [
+								"{{hotel}}"
+							],
+							"path": [
+								"bookingi"
+							]
+						},
+						"description": "Listando reservas inexistentes."
+					},
+					"response": []
+				},
+				{
+					"name": "Gerar Token Inválido",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Credenciais Inválidas\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"reason\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code é 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"adimin\",\r\n    \"password\" : \"abc321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hotel}}/auth",
+							"host": [
+								"{{hotel}}"
+							],
+							"path": [
+								"auth"
+							]
+						},
+						"description": "Fazendo a geração de autorização, porem de modo inválido."
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Reserva já Existentes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Erro no Servidor Interno\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Internal Server Error\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Reserva já Criada\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Internal Server Error\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code é 500\", function () {\r",
+									"    pm.response.to.have.status(500);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookingid\": 2470,\r\n    \"booking\": {\r\n        \"firstname\": \"Ismael\",\r\n        \"lastname\": \"Gabriel\",\r\n        \"totalprice\": 4884,\r\n        \"depositpaid\": false,\r\n        \"bookingdates\": {\r\n            \"checkin\": \"2024-11-25\",\r\n            \"checkout\": \"2024-11-29\"\r\n        },\r\n        \"additionalneeds\": \"Tests BeTalent\"\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hotel}}/booking",
+							"host": [
+								"{{hotel}}"
+							],
+							"path": [
+								"booking"
+							]
+						},
+						"description": "Tentando criar uma reserva já existente."
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Reserva não Criada",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Não é possivel fazer a auteração, reserva não existe\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Method Not Allowed\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code é 405\", function () {\r",
+									"    pm.response.to.have.status(405);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\": \"Josh\",\r\n    \"lastname\": \"Allen\",\r\n    \"totalprice\": 45,\r\n    \"depositpaid\": false,\r\n    \"bookingdates\": {\r\n        \"checkin\": \"2018-01-04\",\r\n        \"checkout\": \"2019-12-01\"\r\n    },\r\n    \"additionalneeds\": \"Marry Christmas\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hotel}}/booking/8768",
+							"host": [
+								"{{hotel}}"
+							],
+							"path": [
+								"booking",
+								"8768"
+							]
+						},
+						"description": "Tentando atualizar uma reserva não criada."
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Usuário da Reserva Inexistente",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Não foi possivel realizar alteração, reserva Inexistente\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Method Not Allowed\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code é 405\", function () {\r",
+									"    pm.response.to.have.status(405);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\": \"Joeli\",\r\n    \"lastname\": \"Donelia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hotel}}/booking/684635",
+							"host": [
+								"{{hotel}}"
+							],
+							"path": [
+								"booking",
+								"684635"
+							]
+						},
+						"description": "Tentando atualizar usuários da reserva, porem inexistentes."
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Reserva Inexistente",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Reserva não pode ser Deletado (Inexistente)\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"Method Not Allowed\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code é 405\", function () {\r",
+									"  pm.response.to.have.status(405);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{hotel}}/booking/24551",
+							"host": [
+								"{{hotel}}"
+							],
+							"path": [
+								"booking",
+								"24551"
+							]
+						},
+						"description": "Tentando deletar uma reserva inexistente"
+					},
+					"response": []
+				}
+			],
+			"description": "Cenários de Testes com resultados invalidos."
+		},
+		{
+			"name": "Filtros e Buscas",
+			"item": [
+				{
+					"name": "Buscar Reservas pelo Nome",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Reservas de Josh\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"bookingid\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"ID de uma reserva específica que corresponde aos critérios de pesquisa\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"bookingid\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code é 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{hotel}}/booking?firstname=Josh",
+							"host": [
+								"{{hotel}}"
+							],
+							"path": [
+								"booking"
+							],
+							"query": [
+								{
+									"key": "firstname",
+									"value": "Josh"
+								}
+							]
+						},
+						"description": "Buscando reservas pelo nome."
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Reservas Hotel Especifica por id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Usuário encontrado\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"firstname\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code é 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{hotel}}/booking/3",
+							"host": [
+								"{{hotel}}"
+							],
+							"path": [
+								"booking",
+								"3"
+							]
+						},
+						"description": "Buscando reservas pelo id."
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Reservas pelo Sobrenome",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Reservas de John Smith\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"bookingid\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code é 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{hotel}}/booking?lastname=Smith",
+							"host": [
+								"{{hotel}}"
+							],
+							"path": [
+								"booking"
+							],
+							"query": [
+								{
+									"key": "lastname",
+									"value": "Smith"
+								}
+							]
+						},
+						"description": "Buscando reservas pelo sobrenome."
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Reservas por check-in",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Todas as Reservas de 02/03/2018\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"bookingid\");\r",
+									"});\r",
+									"pm.test(\"Status code é 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{hotel}}/booking?check-in=2018-03-02",
+							"host": [
+								"{{hotel}}"
+							],
+							"path": [
+								"booking"
+							],
+							"query": [
+								{
+									"key": "check-in",
+									"value": "2018-03-02"
+								}
+							]
+						},
+						"description": "Buscando reservas prlo check-in."
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Reservas por check-out",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"pm.test(\"Todas as Reservas de 14/06/2001\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"bookingid\");\r",
+									"});\r",
+									"pm.test(\"Status code é 200\", function () {\r",
+									"  pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{hotel}}/booking?check-out=2001-06-14",
+							"host": [
+								"{{hotel}}"
+							],
+							"path": [
+								"booking"
+							],
+							"query": [
+								{
+									"key": "check-out",
+									"value": "2001-06-14"
+								}
+							]
+						},
+						"description": "Buscando reservas pelo check-out."
+					},
+					"response": []
+				}
+			],
+			"description": "Usando váriaveis para realizar as buscas de forma customizada."
+		},
+		{
+			"name": "Token",
+			"item": [
+				{
+					"name": "Gerar Token valido",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Token para usar em solicitações futuras\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"token\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Status code é 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"admin\",\r\n    \"password\" : \"password123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hotel}}/auth",
+							"host": [
+								"{{hotel}}"
+							],
+							"path": [
+								"auth"
+							]
+						},
+						"description": "Gerando token de autorização válido."
+					},
+					"response": []
+				}
+			],
+			"description": "Cenário de gerar codigo de Autorização."
+		},
+		{
+			"name": "Listar Reservas do Hotel",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Reserva encontrada\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"bookingid\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code é 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{hotel}}/booking",
+					"host": [
+						"{{hotel}}"
+					],
+					"path": [
+						"booking"
+					]
+				},
+				"description": "Listando as reservas do Hotel."
+			},
+			"response": []
+		},
+		{
+			"name": "Criar Reserva no Hotel",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Nova Reserva Criada por Ismael Gabriel\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"bookingid\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Primeiro nome do hóspede que fez a reserva\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"firstname\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code é 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\" : \"Ismael\",\r\n    \"lastname\" : \"Gabriel\",\r\n    \"totalprice\" : 48845,\r\n    \"depositpaid\" : false,\r\n    \"bookingdates\" : {\r\n        \"checkin\" : \"2024/11/25\",\r\n        \"checkout\" : \"2024/11/29\"\r\n    },\r\n    \"additionalneeds\" : \"Tests BeTalent\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hotel}}/booking",
+					"host": [
+						"{{hotel}}"
+					],
+					"path": [
+						"booking"
+					]
+				},
+				"description": "Criando uma reserva no Hotel."
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Reserva já Criada",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Atualizou a Reserva Criada por Ismael\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"firstname\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Primeiro nome do hóspede que fez a reserva\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"firstname\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code é 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"Ismael\",\r\n    \"lastname\": \"Gabriel\",\r\n    \"totalprice\": 4587,\r\n    \"depositpaid\": true,\r\n    \"bookingdates\": {\r\n        \"checkin\": \"2018-01-04\",\r\n        \"checkout\": \"2019-12-01\"\r\n    },\r\n    \"additionalneeds\": \"Marry Christmas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hotel}}/booking/855",
+					"host": [
+						"{{hotel}}"
+					],
+					"path": [
+						"booking",
+						"855"
+					]
+				},
+				"description": "Atualizando uma reserva já criada."
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Usuário da Reserva",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Atualizou Usuário para Joeli Donelia\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"firstname\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Primeiro nome do hóspede que fez a reserva\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"firstname\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code é 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"Mary\",\r\n    \"lastname\": \"Jackson\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hotel}}/booking/26",
+					"host": [
+						"{{hotel}}"
+					],
+					"path": [
+						"booking",
+						"26"
+					]
+				},
+				"description": "Atualizando o nome e sobrenome do usuário em uma reserva já criada."
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Reserva do Hotel",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Reserva deletada com sucesso\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Created\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code é 201\", function () {\r",
+							"  pm.response.to.have.status(201);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{hotel}}/booking/4",
+					"host": [
+						"{{hotel}}"
+					],
+					"path": [
+						"booking",
+						"4"
+					]
+				},
+				"description": "Delentando uma reserva feita no Hotel."
+			},
+			"response": []
+		}
+	]
+}
