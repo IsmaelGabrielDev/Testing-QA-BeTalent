@@ -272,4 +272,42 @@ Este projeto realiza o teste de uma API de Reservas de Hotel, se trata de uma AP
 <div align="Center">
     <img width="1920" src="Sprints.status/Screenshot 2024-11-26 083935.png">
 </div>
-#
+
+## Realizacão de Testes com Postman
+
+<br>
+
+Este projeto realiza testes de uma API, cobrindo o fluxo completo de Token, Busca, Edicão ou atualização de reservas, criação da reserva, atualização de nome, sobrenome, cenarios negativos e invalidos.O ambiente utiliza Navegador (Chrome) e programa de API Postman.
+
+## Pré-requisitos
+
+Certifique-se de que você possui as seguintes ferramentas instaladas:
+
+ - **Postman** (Ultima versão recomendada)
+ - **Navegador (ex:Chrome)** (Ultima versão recomendada)
+   
+<br>
+
+## Instalação
+
+1. **Instalação**
+
+```bash
+   npm install
+   npm install cypress
+```
+<br>
+
+2. **Execução de testes**
+
+```bash
+   npx cypress open
+```
+<br>
+
+## **Tecnologias Utilizadas**
+  
+ - **Cypress.io:** Framework para automação de testes.
+ - **Nodejs:** Ferramenta de desenvolvimento de aplicações web.
+ - **GitHub:** Ferramenta de desenvolvimento colaborativo.
+ - **Visual Studios** Ferramenta de desenvolvimento de software.

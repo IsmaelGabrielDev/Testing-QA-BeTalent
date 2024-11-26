@@ -606,9 +606,89 @@ Certifique-se de que você possui as seguintes ferramentas instaladas:
 ```
 <br>
 
+## Melhoria: Automação de CI/CD
+
+Realizando a integração do projeto ao GitHub, podemos Automatizar o código a integração Contínua (CI) e a Integração Contínua Deployment (CD), podendo ter melhor controle do versionamento do código.
+
+<br>
+
+## Pré-requisitos
+
+Certifique-se de que você possui as seguintes ferramentas instaladas:
+
+  - **Navegador** (Ultima versão recomendada)
+  - **Jenkins** (Ultima versão recomendada)
+  - **Node.js** (versão LTS recomendada)
+  - **Visual Studios** (Ultima versão recomendada)
+
+## 1. **Instalação**
+
+- Abrir o visual Studios e digitar no terminal.
+```bash
+   npm install
+   npm install cypress
+```
+<br>
+
+## 2. **Ambiente configurado**
+
+
+ - Instalar o Jenkins.
+
+ - Criar uma porta host. (ex: 8090)
+
+ - Abrir o navegador.
+
+ - Entrar no localhost criado. (ex: localhost:8090 no navegador)
+
+ - Ir no diretório de instalação do seu Jenkins e abrir o arquivo .txt com nome jenkins.err .
+
+ - Digitar o usuario do arquivo .txt na pagina de login do Jenkins ou criar conta nova.
+
+ - Clicar em Nova tarefa, escolher um nome e escolher a opção Pipeline.
+
+ - Clicar em configurar, descer até Pipenile e escolher a opção Pipeline script.
+
+ - Digitar no Script:
+
+<br>
+
+```bash
+pipeline {
+    agent any
+
+    stages {
+        stage('Clonando git e instalando dependencias') {
+            steps {
+                git branch: 'main', url: 'https://github.com/IsmaelGabrielDev/test-ui-swaglabs.git'
+                bat 'npm install'
+            }
+        }
+        stage('Testando aplicação') {
+            steps {
+                bat '''set NO_COLOR=1
+npm run cy:run'''
+            }
+        }
+    }
+}
+```
+#
+
+- Ou escolher a opcão Pipeline script from SCM, clicar na opção SCM e colocar Git.
+
+- Copiar o link deste repositório e colar na opção URL que ira aparecer.
+    
+- Click em salvar, depois em Construir Agora.
+
+- Clicando em Build você acompanha seu teste em execusão.
+
+ <br>
+
 ## **Tecnologias Utilizadas**
   
  - **Cypress.io:** Framework para automação de testes.
- - **Nodejs:** Ferramenta de desenvolvimento de aplicações web.
+ - **Nodejs:** Ferramenta de desenvolvimento web e hardware.
+ - **Jenkins:** Ferramenta para automação de código aberto.
  - **GitHub:** Ferramenta de desenvolvimento colaborativo.
  - **Visual Studios** Ferramenta de desenvolvimento de software.
