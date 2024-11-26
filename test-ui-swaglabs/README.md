@@ -15,7 +15,7 @@ Este projeto realiza a automação de testes de uma aplicação Web, cobrindo o 
  - A conta standard_user entrou, inclusive nos testes do Cypress, porem, no Cypress tem um bug de confirmação de autorização.
 
 <div align="center">
-    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 042227.png">
+    <img width="560" src="Sprints.bugs/Screenshot 2024-11-26 042227.png" style="max-width: 100%;">
 </div>
 <div align="center">
     <img width="560" src="Sprints.bugs/image.png">
