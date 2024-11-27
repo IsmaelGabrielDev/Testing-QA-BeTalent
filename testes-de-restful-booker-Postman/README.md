@@ -290,24 +290,26 @@ Certifique-se de que você possui as seguintes ferramentas instaladas:
 
 ## Instalação
 
-1. **Instalação**
+1. **Ambiente de Testes**
 
-```bash
-   npm install
-   npm install cypress
-```
+ - Abrir o Postman.
+ - Criar uma Collection.
+ - Ou usar a Collection já criada neste repositório usando a opção Menu, file, dentro do Postman.
+ - Escolher a opção import para adicionar o arquivo baixado.
+ - Ou arrastar o arquivo para dentro da área.
+ - Selecionar a pasta e abrir.
+
 <br>
 
 2. **Execução de testes**
 
-```bash
-   npx cypress open
-```
+ - Abrir o Postman e selecionar a Collection.
+ - Abrir o documento da API e realizar os testes no Postman.
+
 <br>
 
 ## **Tecnologias Utilizadas**
   
- - **Cypress.io:** Framework para automação de testes.
- - **Nodejs:** Ferramenta de desenvolvimento de aplicações web.
+ - **Postman:** Framework para testes de API.
+ - **Navegador:** Ferramenta de navegação Web.
  - **GitHub:** Ferramenta de desenvolvimento colaborativo.
- - **Visual Studios** Ferramenta de desenvolvimento de software.
