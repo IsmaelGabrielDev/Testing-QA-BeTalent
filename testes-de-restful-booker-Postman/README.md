@@ -304,6 +304,7 @@ Certifique-se de que você possui as seguintes ferramentas instaladas:
 2. **Execução de testes**
 
  - Abrir o Postman e selecionar a Collection.
+ - Abrir o navegador.
  - Abrir o documento da API e realizar os testes no Postman.
 
 <br>
